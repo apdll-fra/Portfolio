@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Léon Besset — Étudiant en Informatique | Recherche alternance</title>
+  <meta name="description" content="Portfolio de Léon Besset, étudiant en Bachelor Informatique à l'ESGI, à la recherche d'une alternance.">
+
+  <!-- Polices Google Fonts : JetBrains Mono pour les titres/labels (esprit "code"),
+       Inter pour le texte courant (lisibilité) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       BARRE DE NAVIGATION
+       Fixée en haut, façon barre de titre d'un éditeur de code
+  ============================================ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <span class="navbar__logo">leon<span class="accent">.</span>besset</span>
+      <nav class="navbar__links">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <a href="assets/CV_Leon_Besset.pdf" class="btn btn--ghost navbar__cta" download>Télécharger le CV</a>
+      <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO — fenêtre de terminal avec animation de frappe
+  ============================================ -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal__title">leon@portfolio: ~</span>
+        </div>
+        <div class="terminal__body">
+          <p class="terminal__line"><span class="prompt">$</span> whoami</p>
+          <p class="terminal__output" id="typed-name"></p>
+          <p class="terminal__line"><span class="prompt">$</span> cat statut.txt</p>
+          <p class="terminal__output">
+            Étudiant Bachelor Informatique — ESGI Aix-en-Provence<br>
+            <span class="dim">Disponible en entreprise : mercredi → vendredi</span><br>
+            <span class="ok">→ En recherche active d'une alternance en informatique</span>
+          </p>
+          <p class="terminal__line"><span class="prompt">$</span> <span class="cursor">▌</span></p>
+        </div>
+      </div>
+
+      <div class="hero__portrait">
+        <img src="assets/photo.png" alt="Photo de Léon Besset" class="hero__photo">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span> Disponible pour une alternance
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero__actions">
+      <a href="#contact" class="btn btn--primary">Me contacter</a>
+      <a href="#experience" class="btn btn--ghost">Voir mon parcours</a>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Défiler vers le bas">
+      <span>scroll</span>
+      <span class="scroll-hint__arrow">↓</span>
+    </a>
+  </section>
+
+  <!-- ============================================
+       À PROPOS
+  ============================================ -->
+  <section class="section" id="about">
+    <p class="cmd">$ cat about.md</p>
+    <h2 class="section__title">À propos</h2>
+
+    <div class="about__grid">
+      <div class="about__text">
+        <p>
+          Je m'appelle <strong>Léon Besset</strong>, j'ai découvert l'informatique au lycée
+          — spécialités mathématiques et Numérique et Sciences Informatiques — et j'ai
+          rejoint le club informatique de mon établissement en terminale pour approfondir
+          la programmation, le travail en équipe sur des projets concrets et m'initier à
+          la cybersécurité.
+        </p>
+        <p>
+          Aujourd'hui en première année de <strong>Bachelor Informatique à l'ESGI</strong>
+          (Aix-en-Provence), je consolide mes bases en programmation, bases de données et
+          réseaux, et je suis à la recherche d'une alternance pour mettre ces compétences
+          en pratique en entreprise.
+        </p>
+        <p>
+          En dehors des écrans, je suis <strong>moniteur de voile</strong> l'été et
+          <strong>compétiteur</strong> en voile depuis plusieurs années — une discipline qui
+          m'a appris l'autonomie, la rigueur et le sens des responsabilités, des qualités
+          que je retrouve utiles dans le travail en équipe sur un projet informatique.
+        </p>
+      </div>
+
+      <div class="about__meta">
+        <div class="meta-card">
+          <span class="meta-card__label">Formation</span>
+          <span class="meta-card__value">ESGI Aix-en-Provence</span>
+          <span class="meta-card__sub">Bachelor Informatique — 1ère année</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-card__label">Localisation</span>
+          <span class="meta-card__value">Bormes-les-Mimosas, 83</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-card__label">Rythme d'alternance</span>
+          <span class="meta-card__value">Lun–Mar en cours</span>
+          <span class="meta-card__sub">Mer–Ven en entreprise</span>
+        </div>
+        <div class="meta-card">
+          <span class="meta-card__label">Langues</span>
+          <span class="meta-card__value">FR natif · EN B2 · ES A2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMPÉTENCES
+  ============================================ -->
+  <section class="section section--alt" id="skills">
+    <p class="cmd">$ ./skills.sh --list</p>
+    <h2 class="section__title">Compétences</h2>
+
+    <div class="skills__grid">
+      <div class="skill-card">
+        <h3>Python</h3>
+        <div class="skill-bar"><div class="skill-bar__fill" style="--level:40%"></div></div>
+        <p>Bases, scripts simples, logique</p>
+      </div>
+      <div class="skill-card">
+        <h3>SQL</h3>
+        <div class="skill-bar"><div class="skill-bar__fill" style="--level:45%"></div></div>
+        <p>Requêtes simples, bases de données</p>
+      </div>
+      <div class="skill-card">
+        <h3>HTML</h3>
+        <div class="skill-bar"><div class="skill-bar__fill" style="--level:55%"></div></div>
+        <p>Structure de pages web</p>
+      </div>
+      <div class="skill-card">
+        <h3>Réseaux</h3>
+        <div class="skill-bar"><div class="skill-bar__fill" style="--level:35%"></div></div>
+        <p>Notions d'architecture réseaux</p>
+      </div>
+      <div class="skill-card">
+        <h3>Modélisation BDD</h3>
+        <div class="skill-bar"><div class="skill-bar__fill" style="--level:40%"></div></div>
+        <p>Conception de bases de données</p>
+      </div>
+    </div>
+
+    <div class="soft-skills">
+      <span class="tag">Curieux</span>
+      <span class="tag">Esprit d'équipe</span>
+      <span class="tag">Autonome</span>
+      <span class="tag">Motivé</span>
+      <span class="tag">Rigoureux</span>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EXPÉRIENCES — présentées comme un historique Git
+  ============================================ -->
+  <section class="section" id="experience">
+    <p class="cmd">$ git log --oneline --experiences</p>
+    <h2 class="section__title">Parcours</h2>
+
+    <div class="git-log">
+
+      <div class="commit">
+        <div class="commit__marker"></div>
+        <div class="commit__content">
+          <div class="commit__head">
+            <span class="commit__hash">#003</span>
+            <span class="commit__date">Fin 2025</span>
+          </div>
+          <h3 class="commit__title">Équipier polyvalent — McDonald's</h3>
+          <ul>
+            <li>Prise de commande en caisse et au drive</li>
+            <li>Service à table et encaissement des clients</li>
+            <li>Travail en équipe dans un environnement dynamique et sous rythme soutenu</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="commit">
+        <div class="commit__marker"></div>
+        <div class="commit__content">
+          <div class="commit__head">
+            <span class="commit__hash">#002</span>
+            <span class="commit__date">Étés 2023 · 2024 · 2025</span>
+          </div>
+          <h3 class="commit__title">Moniteur de voile — Club de voile de Bormes-les-Mimosas</h3>
+          <ul>
+            <li>Encadrement de groupes de tous âges en autonomie</li>
+            <li>Responsabilités en matière de sécurité et d'organisation</li>
+            <li>Développement du sens du service et de la relation client</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="commit">
+        <div class="commit__marker"></div>
+        <div class="commit__content">
+          <div class="commit__head">
+            <span class="commit__hash">#001</span>
+            <span class="commit__date">2022 – 2025</span>
+          </div>
+          <h3 class="commit__title">Club informatique — Lycée Jean Aicard</h3>
+          <ul>
+            <li>Approfondissement de la programmation et de la cybersécurité</li>
+            <li>Travail en équipe sur des projets informatiques simples</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="formations">
+      <h3 class="formations__title">Formations</h3>
+      <div class="formation-row">
+        <span class="formation-row__name">ESGI Aix-en-Provence — Bachelor Informatique</span>
+        <span class="formation-row__date">2025 – en cours</span>
+      </div>
+      <div class="formation-row">
+        <span class="formation-row__name">Lycée Jean Aicard — Bac spé Mathématiques / NSI</span>
+        <span class="formation-row__date">2022 – 2025</span>
+      </div>
+      <div class="formation-row">
+        <span class="formation-row__name">Collège Frédérique Mistral — Brevet, mention Très bien</span>
+        <span class="formation-row__date">2021</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROJETS / CENTRES D'INTÉRÊT
+  ============================================ -->
+  <section class="section section--alt" id="projects">
+    <p class="cmd">$ ls -la interets/</p>
+    <h2 class="section__title">Centres d'intérêt</h2>
+
+    <div class="interests__grid">
+      <div class="interest-card">
+        <span class="interest-card__icon">⛵</span>
+        <h3>Voile en compétition</h3>
+        <p>Participation à plusieurs championnats de France et du monde.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-card__icon">🤿</span>
+        <h3>Plongée sous-marine</h3>
+        <p>Titulaire du niveau 1, pratique régulière.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-card__icon">🎵</span>
+        <h3>Musique</h3>
+        <p>Plusieurs années de pratique de l'accordéon et du saxophone.</p>
+      </div>
+      <div class="interest-card">
+        <span class="interest-card__icon">🚗</span>
+        <h3>Mobilité</h3>
+        <p>Titulaire du permis auto et du permis bateau.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+  ============================================ -->
+  <section class="section" id="contact">
+    <p class="cmd">$ ./contact.sh --send</p>
+    <h2 class="section__title">Contact</h2>
+    <p class="contact__intro">
+      À la recherche d'une alternance en informatique dès que possible.
+      N'hésitez pas à me contacter directement.
+    </p>
+
+    <div class="contact__grid">
+      <a href="mailto:bessetleon@gmail.com" class="contact-card">
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__value">bessetleon@gmail.com</span>
+      </a>
+      <a href="tel:0783927549" class="contact-card">
+        <span class="contact-card__label">Téléphone</span>
+        <span class="contact-card__value">07 83 92 75 49</span>
+      </a>
+      <a href="https://www.linkedin.com/in/léon-besset" target="_blank" rel="noopener" class="contact-card">
+        <span class="contact-card__label">LinkedIn</span>
+        <span class="contact-card__value">/in/léon-besset</span>
+      </a>
+      <div class="contact-card contact-card--static">
+        <span class="contact-card__label">Localisation</span>
+        <span class="contact-card__value">Bormes-les-Mimosas, 83230</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Léon Besset — <span class="dim">construit avec HTML, CSS &amp; JS</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
