@@ -15,10 +15,9 @@
 </head>
 <body>
 
-  <!-- ============================================
+  <!-- 
        BARRE DE NAVIGATION
-       Fixée en haut, façon barre de titre d'un éditeur de code
-  ============================================ -->
+        -->
   <header class="navbar">
     <div class="navbar__inner">
       <span class="navbar__logo">leon<span class="accent">.</span>besset</span>
@@ -27,7 +26,9 @@
         <a href="#skills">skills</a>
         <a href="#experience">experience</a>
         <a href="#projects">projects</a>
+        <a href="#hobies">hobies</a>
         <a href="#contact">contact</a>
+        
       </nav>
       <a href="assets/CV_Leon_Besset.pdf" class="btn btn--ghost navbar__cta" download>Télécharger le CV</a>
       <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
@@ -36,9 +37,9 @@
     </div>
   </header>
 
-  <!-- ============================================
-       HERO — fenêtre de terminal avec animation de frappe
-  ============================================ -->
+  <!--
+      HERO — fenêtre de terminal avec animation de frappe
+      -->
   <section class="hero" id="top">
     <div class="hero__inner">
 
@@ -71,20 +72,17 @@
 
     </div>
 
-    <div class="hero__actions">
-      <a href="#contact" class="btn btn--primary">Me contacter</a>
-      <a href="#experience" class="btn btn--ghost">Voir mon parcours</a>
-    </div>
-
     <a href="#about" class="scroll-hint" aria-label="Défiler vers le bas">
       <span>scroll</span>
       <span class="scroll-hint__arrow">↓</span>
     </a>
   </section>
 
-  <!-- ============================================
-       À PROPOS
-  ============================================ -->
+  <!--
+      À PROPOS
+      -->
+
+
   <section class="section" id="about">
     <p class="cmd">$ cat about.md</p>
     <h2 class="section__title">À propos</h2>
@@ -135,9 +133,10 @@
     </div>
   </section>
 
-  <!-- ============================================
-       COMPÉTENCES
-  ============================================ -->
+  <!--
+      COMPÉTENCES
+      -->
+  
   <section class="section section--alt" id="skills">
     <p class="cmd">$ ./skills.sh --list</p>
     <h2 class="section__title">Compétences</h2>
@@ -179,12 +178,14 @@
     </div>
   </section>
 
-  <!-- ============================================
-       EXPÉRIENCES — présentées comme un historique Git
-  ============================================ -->
+  <!--
+      EXPÉRIENCES 
+      -->
+
+
   <section class="section" id="experience">
     <p class="cmd">$ git log --oneline --experiences</p>
-    <h2 class="section__title">Parcours</h2>
+    <h2 class="section__title">Experiences</h2>
 
     <div class="git-log">
 
@@ -241,7 +242,7 @@
       <h3 class="formations__title">Formations</h3>
       <div class="formation-row">
         <span class="formation-row__name">ESGI Aix-en-Provence — Bachelor Informatique</span>
-        <span class="formation-row__date">2025 – en cours</span>
+        <span class="formation-row__date">2026 – en cours</span>
       </div>
       <div class="formation-row">
         <span class="formation-row__name">Lycée Jean Aicard — Bac spé Mathématiques / NSI</span>
@@ -254,10 +255,23 @@
     </div>
   </section>
 
-  <!-- ============================================
-       PROJETS / CENTRES D'INTÉRÊT
-  ============================================ -->
-  <section class="section section--alt" id="projects">
+  <!--
+      Projets
+      -->
+
+  <section class="section section--alt" id="projects"> 
+    <h2 class="section__title">Mes projets</h2>
+
+    
+
+  </section>
+
+  <!--
+      CENTRES D'INTÉRÊT
+      -->
+
+
+  <section class="section" id="hobies">
     <p class="cmd">$ ls -la interets/</p>
     <h2 class="section__title">Centres d'intérêt</h2>
 
@@ -285,10 +299,11 @@
     </div>
   </section>
 
-  <!-- ============================================
+  <!-- 
        CONTACT
-  ============================================ -->
-  <section class="section" id="contact">
+       -->
+
+  <section class="section section--alt" id="contact">
     <p class="cmd">$ ./contact.sh --send</p>
     <h2 class="section__title">Contact</h2>
     <p class="contact__intro">
@@ -317,7 +332,7 @@
   </section>
 
   <footer class="footer">
-    <p>© 2026 Léon Besset — <span class="dim">construit avec HTML, CSS &amp; JS</span></p>
+    <p>© 2026 Léon Besset — construit avec HTML, CSS &amp; JS</p>
   </footer>
 
   <script src="script.js"></script>
